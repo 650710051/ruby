@@ -1,9 +1,10 @@
 # Returning a value from function
 
-คือ การส่งค่าจากในเมธอดกลับออกมา ซึ่งใน Ruby เมธอดจะส่งค่ากลับเพียง 1 ค่าเสมอ (คือ object หนึ่งตัว) ค่าที่ส่งกลับสามารถเป็น object ใดก็ได้ (แม้จะไม่ได้เขียน return ก็จะส่งค่าของบรรทัดสุดท้ายอัตโนมัติ
+คือ การส่งค่าจากในเมธอดกลับออกมา ซึ่งใน Ruby เมธอดจะส่งค่ากลับเพียง 1 ค่าเสมอ (คือ object หนึ่งตัว) ค่าที่ส่งกลับสามารถเป็น object ใดก็ได้ (แม้จะไม่ได้เขียน return ก็จะส่งค่าของบรรทัดสุดท้ายอัตโนมัติ)
 
 \*object คือ หน่วยข้อมูลที่เมธอดเรียกทำงานได้ ทุกอย่างใน Ruby เป็น object ทั้งตัวเลข (5), ข้อความ ("Hello"), Array (\[1,2,3]), nil (ย่อมาจาก NilClass หมายถึง ไม่มีค่า,ว่าง)
 
+{% code title="" %}
 ```ruby
 def say_hello
   "Hello"   # คืนค่า "Hello"
@@ -22,6 +23,35 @@ puts say_hi     # output=> Hi
 puts show      # output=> Showing \n nil
 
 ```
+{% endcode %}
+
+{% code title="Ruby" %}
+```ruby
+def first_var_of_sum(a, b, c)
+  return a + b + c
+  a + b
+  c
+end
+
+def second_var_of_sum(a, b, c)
+  return
+  a + b + c
+  a + b
+  c
+end
+
+def third_var_of_sum(a, b, c)
+  a + b + c
+  a + b
+  c
+end
+
+puts first_var_of_sum(1, 2, 3)  # => 6
+puts second_var_of_sum(1, 2, 3) # => nil (explicit return ไม่มีค่า)
+puts third_var_of_sum(1, 2, 3)  # => 3 (implicit return ของบรรทัดสุดท้าย)
+
+```
+{% endcode %}
 
 เปรียบเทียบกับภาษาอื่นๆ
 
@@ -112,7 +142,7 @@ print(show())       # output => Showing \n None
 ```
 {% endcode %}
 
-## Declaring and Calling Ruby Methond
+## Declaring and Calling Ruby Method
 
 {% code title="The syntax of a Ruby method" %}
 ```ruby
@@ -141,6 +171,17 @@ def saysomething()
 end
 
 puts saysomething  # => Hello
+```
+{% endcode %}
+
+{% code title="" %}
+```ruby
+def geeks
+  puts "Welcome to GFG portal"
+end
+
+geeks #output => Welcome to GFG portal
+
 ```
 {% endcode %}
 
@@ -211,8 +252,8 @@ multiply(6, 7)    # output=> 42
 ```
 {% endcode %}
 
-* def multiply คือ การประกาศเมธอดชื่อ multiply&#x20;
 * (val1, val2) คือ arguments คือค่าที่ส่งเข้ามาในเมธอดเพื่อใช้คำนวณ
+* def multiply คือ การประกาศเมธอดชื่อ multiply&#x20;
 * result = val1 \* val2 คือ  การคำนวณผลคูณของ val1 และ val2 แล้วเก็บในตัวแปร result
 * puts result คือ แสดงผลลัพธ์ออกหน้าจอ
 * end คือ ปิดการประกาศเมธอด
@@ -225,6 +266,19 @@ multiply(6, 7)    # output=> 42
 
     \
 
+
+<pre class="language-ruby" data-title="Ruby"><code class="lang-ruby"><strong>def add_one(value)
+</strong>  value + 1
+end
+
+def add_one(a, b = 1)
+  a + b
+end
+
+puts add_one(5) # output=> 6
+puts add_one(5, 10) # output=> 15
+
+</code></pre>
 
 เปรียบเทียบกับภาษาอื่นๆ
 
