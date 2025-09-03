@@ -4,7 +4,7 @@
 
 \*object คือ หน่วยข้อมูลที่เมธอดเรียกทำงานได้ ทุกอย่างใน Ruby เป็น object ทั้งตัวเลข (5), ข้อความ ("Hello"), Array (\[1,2,3]), nil (ย่อมาจาก NilClass หมายถึง ไม่มีค่า,ว่าง)
 
-{% code title="" %}
+{% code title="Ruby" %}
 ```ruby
 def say_hello
   "Hello"   # คืนค่า "Hello"
@@ -362,7 +362,7 @@ args.each do |item| ... end
 
 * do ... end ใช้เหมือน { ... }
 * .each ใช้เพื่อวนลูปทีละค่าใน array args
-*   |item| → ตัวแปรแทนค่าของสมาชิกหนึ่งตัว (element) ของ array ในแต่ละรอบ
+*   |item| คือ ตัวแปรแทนค่าของสมาชิกหนึ่งตัว (element) ของ array ในแต่ละรอบ
 
     \
 
