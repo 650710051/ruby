@@ -78,6 +78,29 @@ nil
 * เมธอด second return ค่า  nil เพราะ ไม่ได้ใส่ค่าอะไรใน return&#x20;
 * เมธอด third return ค่าของ c เพราะไม่มีคำสั่ง return  Ruby จะคืนค่าบรรทัดสุดท้ายของเมธอดอัตโนมัติ
 
+{% code title="Ruby" %}
+```ruby
+def test(a, b)
+  ans1 = a / b
+  ans2 = a % b
+  return ans1, ans2
+end
+
+q, r = test(10, 3)
+puts q
+puts r
+```
+{% endcode %}
+
+{% code title="Output" %}
+```ruby
+3
+1
+```
+{% endcode %}
+
+Ruby สามารถ return หลายค่าออกมาแล้วสร้างตัวแปรแต่ละค่าเก็บไว้แยกใช้ได้
+
 
 
 เปรียบเทียบกับภาษาอื่นๆ
