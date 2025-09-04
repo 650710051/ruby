@@ -126,7 +126,7 @@ void show() {
 int main() {
     printf("%s\n", say_hello()); 
     printf("%s\n", say_hi());  
-    show(); // เรียกฟังก์ชัน show → แสดง Showing
+    show(); // เรียกฟังก์ชัน show
 
     return 0; // จบโปรแกรม
 }
