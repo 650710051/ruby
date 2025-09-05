@@ -7,15 +7,14 @@
 {% code title="Ruby" %}
 ```ruby
 def say_hello
-  "Hello"   # คืนค่า "Hello"
-end
+  "Hello"  
 
 def say_hi
-  return "Hi"   # คืนค่า "Hi"
+  return "Hi"   
 end
 
 def show
-  puts "Showing"  # พิมพ์ออก แต่คืนค่าเป็น nil
+  puts "Showing" 
 end
 
 puts say_hello 
@@ -34,6 +33,8 @@ Showing
 {% endcode %}
 
 จะเห็นได้ว่าบรรทัดที่ 4 จะพิมพ์บรรทัดว่าง เพราะ คำสั่ง puts จะคืนค่าเป็นค่า nil(บรรทัดว่าง)
+
+
 
 {% code title="Ruby" %}
 ```ruby
@@ -77,6 +78,8 @@ nil
 * เมธอด first จะ return ค่าของ a + b + c ออกมา&#x20;
 * เมธอด second return ค่า  nil เพราะ ไม่ได้ใส่ค่าอะไรใน return&#x20;
 * เมธอด third return ค่าของ c เพราะไม่มีคำสั่ง return  Ruby จะคืนค่าบรรทัดสุดท้ายของเมธอดอัตโนมัติ
+
+
 
 {% code title="Ruby" %}
 ```ruby
@@ -126,7 +129,7 @@ void show() {
 int main() {
     printf("%s\n", say_hello()); 
     printf("%s\n", say_hi());  
-    show(); // เรียกฟังก์ชัน show
+    show(); 
 
     return 0; // จบโปรแกรม
 }
@@ -156,11 +159,10 @@ public class Main {
 
     // เมธอดแบบ void (ไม่มีการคืนค่า)
     public static void show() {
-        System.out.println("Showing");  // แค่พิมพ์ข้อความ
+        System.out.println("Showing"); 
     }
 
     public static void main(String[] args) {
-        // เรียกใช้เมธอด และแสดงผล
         System.out.println(sayHello());
         System.out.println(sayHi());   
         show();                        
@@ -195,12 +197,12 @@ def say_hi():
 
 # ฟังก์ชันที่ไม่คืนค่า (จะคืนค่า None อัตโนมัติ)
 def show():
-    print("Showing")  # แค่พิมพ์ข้อความออกมา
-
+    print("Showing") 
+    
 # เรียกใช้ฟังก์ชัน
-print(say_hello())  # output => Hello
-print(say_hi())     # output => Hi
-print(show())       # output => Showing \n None
+print(say_hello()) 
+print(say_hi())     
+print(show())      
 ```
 {% endcode %}
 
@@ -214,6 +216,8 @@ None
 {% endcode %}
 
 Python ถ้าไม่มีคำสั่ง return จะคืนค่า None อัตโนมัติ
+
+
 
 
 
