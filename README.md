@@ -23,6 +23,27 @@ puts show
 ```
 {% endcode %}
 
+{% code title="Ruby" %}
+```ruby
+def say_hello
+  "Hello"  
+
+def say_hi
+  return "Hi"   
+end
+
+def show
+  puts "Showing" 
+end
+
+puts say_hello 
+puts say_hi    
+puts show      
+
+
+```
+{% endcode %}
+
 {% code title="Output" lineNumbers="true" %}
 ```ruby
 Hello
